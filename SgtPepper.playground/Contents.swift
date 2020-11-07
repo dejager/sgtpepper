@@ -15,7 +15,7 @@ let device = MTLCreateSystemDefaultDevice()!
 
 var library: MTLLibrary?
 do {
-  let path = Bundle.main.path(forResource: "LonelyHearts", ofType: "metal")
+  let path = Bundle.main.path(forResource: "LonelyHearts", ofType: "mtl")
   let source = try String(contentsOfFile: path!, encoding: .utf8)
   library = try device.makeLibrary(source: source, options: nil)
 } catch let error as NSError {
